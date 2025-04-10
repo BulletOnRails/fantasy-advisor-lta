@@ -127,7 +127,16 @@ export const sulTeams: Team[] = [
       { name: "Kisee",
         position: "MID",
         points: 31.0,
-        recommendation: "Ótima escolha - alto abate solo e participação no dano",},
+        recommendation: "Ótima escolha - alto abate solo e participação no dano",
+        stats: {
+          kills: 9,
+          deaths: 3,
+          assists: 14,
+          cs: 350,
+          damageShare: 55,
+          killParticipation: 65
+        }
+      },
       { name: "Morttheus",
         position: "BOT",
         points: 33.6,
