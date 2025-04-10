@@ -1,4 +1,3 @@
-
 // Tipos para os dados dos times e jogadores
 export interface Player {
   name: string;
@@ -313,7 +312,13 @@ export const norteTeams: Team[] = [
     position: 2,
     wins: 2,
     losses: 0,
-    players: []
+    players: [
+      { name: "Licorice", position: "TOP", points: 13.8 },
+      { name: "Oddie", position: "JG", points: 18.9 },
+      { name: "Saint", position: "MID", points: 25.9 },
+      { name: "Hena", position: "BOT", points: 20.8 },
+      { name: "Lyonz", position: "SUP", points: 23.6 }
+    ]
   },
   {
     name: "100 Thieves",
