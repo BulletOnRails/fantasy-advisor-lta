@@ -1,3 +1,4 @@
+
 // Tipos para os dados dos times e jogadores
 export interface Player {
   name: string;
@@ -118,9 +119,9 @@ export const sulTeams: Team[] = [
     players: [
       { name: "Boal", position: "TOP", points: 20.5 },
       { name: "Disamis", position: "JG", points: 21.9 },
-      { name: "Ksee", position: "MID", points: 31.0 },
-      { name: "Mortt", position: "BOT", points: 33.6 },
-      { name: "Trym", position: "SUP", points: 21.7 }
+      { name: "Kisee", position: "MID", points: 31.0 },
+      { name: "Morttheus", position: "BOT", points: 33.6 },
+      { name: "Trymbi", position: "SUP", points: 21.7 }
     ],
     totalPoints: 25.7
   },
@@ -132,11 +133,11 @@ export const sulTeams: Team[] = [
     wins: 2,
     losses: 0,
     players: [
-      { name: "Zoth", position: "TOP", points: 17.3 },
+      { name: "Zothve", position: "TOP", points: 17.3 },
       { name: "Scary", position: "JG", points: 17.1 },
       { name: "Cody", position: "MID", points: 16.4 },
       { name: "CEO", position: "BOT", points: 19.6 },
-      { name: "Prods", position: "SUP", points: 14.0 }
+      { name: "Prodelta", position: "SUP", points: 14.0 }
     ],
     totalPoints: 16.9
   },
@@ -181,7 +182,7 @@ export const sulTeams: Team[] = [
     losses: 2,
     players: [
       { 
-        name: "Burol", 
+        name: "Burdol", 
         position: "TOP", 
         points: 2.6,
         recommendation: "Não recomendado - baixo desempenho",
@@ -195,7 +196,7 @@ export const sulTeams: Team[] = [
         }
       },
       { 
-        name: "Dedoo", 
+        name: "Deodo", 
         position: "JG", 
         points: 2.3,
         recommendation: "Não recomendado - baixa participação",
@@ -263,9 +264,9 @@ export const sulTeams: Team[] = [
     players: [
       { name: "Robo", position: "TOP", points: 13.7 },
       { name: "Shini", position: "JG", points: 6.0 },
-      { name: "Tin", position: "MID", points: 7.3 },
+      { name: "Tinowns", position: "MID", points: 7.3 },
       { name: "Route", position: "BOT", points: 9.1 },
-      { name: "Red", position: "SUP", points: 6.3 }
+      { name: "Redbert", position: "SUP", points: 6.3 }
     ],
     totalPoints: 8.5
   },
@@ -277,9 +278,9 @@ export const sulTeams: Team[] = [
     wins: 0,
     losses: 2,
     players: [
-      { name: "Hidân", position: "TOP", points: 12.4 },
+      { name: "Hidan", position: "TOP", points: 12.4 },
       { name: "Ganks", position: "JG", points: 8.0 },
-      { name: "Fuuli", position: "MID", points: 24.7 },
+      { name: "Fuuu", position: "MID", points: 24.7 },
       { name: "Marvin", position: "BOT", points: 12.5 },
       { name: "Guigs", position: "SUP", points: 10.7 }
     ],
@@ -331,13 +332,19 @@ export const norteTeams: Team[] = [
     totalPoints: 15.6
   },
   {
-    name: "SG",
-    shortName: "SG",
+    name: "Shopify Rebellion",
+    shortName: "S.R",
     color: "bg-lta-blue text-white",
     position: 4,
     wins: 1,
     losses: 1,
-    players: []
+    players: [
+      { name: "Fudge", position: "TOP", points: 9.7 },
+      { name: "Contractz", position: "JG", points: 21.1 },
+      { name: "Palafox", position: "MID", points: 9.4 },
+      { name: "Bvoy", position: "BOT", points: 17.5 },
+      { name: "Ceos", position: "SUP", points: 8.3 }
+    ]
   },
   {
     name: "Cloud 9",
@@ -349,7 +356,7 @@ export const norteTeams: Team[] = [
     players: [
       { name: "Thanatos", position: "TOP", points: 9.8 },
       { name: "Blaber", position: "JG", points: 8.1 },
-      { name: "Loxi", position: "MID", points: 15.5 },
+      { name: "Loki", position: "MID", points: 15.5 },
       { name: "Zven", position: "BOT", points: 19.6 },
       { name: "Vulcan", position: "SUP", points: 15.8 }
     ],
@@ -380,9 +387,9 @@ export const norteTeams: Team[] = [
     losses: 2,
     players: [
       { name: "Castle", position: "TOP", points: 2.2 },
-      { name: "Eyvu", position: "JG", points: 8.3 },
-      { name: "Abbeedge", position: "MID", points: 10.1 },
-      { name: "Scarby", position: "BOT", points: 14.6 },
+      { name: "Exyu", position: "JG", points: 8.3 },
+      { name: "Abbeagge", position: "MID", points: 10.1 },
+      { name: "Scarry", position: "BOT", points: 14.6 },
       { name: "Huhi", position: "SUP", points: 5.2 }
     ],
     totalPoints: 8.1
@@ -397,7 +404,7 @@ export const norteTeams: Team[] = [
     players: [
       { name: "Srtty", position: "TOP", points: 6.7 },
       { name: "Sheiden", position: "JG", points: 10.5 },
-      { name: "Keng", position: "MID", points: 8.6 },
+      { name: "Keine", position: "MID", points: 8.6 },
       { name: "Tomo", position: "BOT", points: 14.3 },
       { name: "Isles", position: "SUP", points: 12.2 }
     ],
