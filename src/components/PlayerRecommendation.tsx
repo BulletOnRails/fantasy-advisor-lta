@@ -17,11 +17,11 @@ interface PlayerRecommendationProps {
 
 const PlayerRecommendation = ({ player, isHighlighted = false }: PlayerRecommendationProps) => {
   // Determine badge color based on points
-  const getBadgeVariant = (points?: number) => {
+  const getBadgeVariant = (points?: number): "default" | "secondary" | "destructive" | "outline" => {
     if (!points) return "outline";
-    if (points >= 25) return "success";
-    if (points >= 15) return "secondary";
-    if (points >= 10) return "default";
+    if (points >= 25) return "secondary";
+    if (points >= 15) return "default";
+    if (points >= 10) return "secondary";
     return "destructive";
   };
 

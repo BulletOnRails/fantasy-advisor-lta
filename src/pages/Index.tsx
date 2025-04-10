@@ -4,7 +4,7 @@ import { sulTeams, norteTeams } from "@/data/teams";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RegionTabContent from "@/components/RegionTabContent";
-import { InfoCircle } from "lucide-react";
+import { Info } from "lucide-react";
 
 const Index = () => {
   return (
@@ -20,7 +20,7 @@ const Index = () => {
             Selecione a região Sul ou Norte para ver as recomendações específicas.
           </p>
           <div className="flex items-start gap-2 text-sm bg-blue-50 dark:bg-blue-950/30 p-3 rounded-md">
-            <InfoCircle className="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+            <Info className="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
             <p>
               <span className="font-semibold">Última atualização:</span> 10 de abril de 2025. 
               Os dados são atualizados manualmente após cada rodada da LTA. 
