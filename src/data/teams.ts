@@ -116,10 +116,22 @@ export const sulTeams: Team[] = [
     wins: 2,
     losses: 0,
     players: [
-      { name: "Boal", position: "TOP", points: 20.5 },
-      { name: "Disamis", position: "JG", points: 21.9 },
-      { name: "Kisee", position: "MID", points: 31.0 },
-      { name: "Morttheus", position: "BOT", points: 33.6 },
+      {
+        name: "Boal",
+        position: "TOP",
+        points: 20.5,
+        recommendation: "Recomendado - bom desempenho",},
+      { name: "Disamis",
+        position: "JG",
+        points: 21.9 },
+      { name: "Kisee",
+        position: "MID",
+        points: 31.0,
+        recommendation: "Ótima escolha - alto abate solo e participação no dano",},
+      { name: "Morttheus",
+        position: "BOT",
+        points: 33.6,
+        recommendation: "Ótima escolha - alto abate e participação no dano",},
       { name: "Trymbi", position: "SUP", points: 21.7 }
     ],
     totalPoints: 25.7
@@ -149,9 +161,15 @@ export const sulTeams: Team[] = [
     losses: 1,
     players: [
       { name: "GuiGo", position: "TOP", points: 11.9 },
-      { name: "Tatu", position: "JG", points: 25.8 },
+      { name: "Tatu",
+        position: "JG",
+        points: 25.8,
+        recommendation: "Recomendado - boa participação em objetivos",},
       { name: "Tutz", position: "MID", points: 17.1 },
-      { name: "Ayu", position: "BOT", points: 26.6 },
+      { name: "Ayu",
+        position: "BOT",
+        points: 26.6,
+        recommendation: "Ótima escolha - alto abate e participação no dano",},
       { name: "Jojo", position: "SUP", points: 21.9 }
     ],
     totalPoints: 20.7
@@ -279,7 +297,11 @@ export const sulTeams: Team[] = [
     players: [
       { name: "Hidan", position: "TOP", points: 12.4 },
       { name: "Ganks", position: "JG", points: 8.0 },
-      { name: "Fuuu", position: "MID", points: 24.7 },
+      {
+        name: "Fuuu",
+        position: "MID",
+        points: 24.7,
+        recommendation: "Ótima escolha - alto abate solo e participação no dano",},
       { name: "Marvin", position: "BOT", points: 12.5 },
       { name: "Guigs", position: "SUP", points: 10.7 }
     ],
@@ -298,8 +320,14 @@ export const norteTeams: Team[] = [
     losses: 0,
     players: [
       { name: "BwiPo", position: "TOP", points: 21.4 },
-      { name: "Inspired", position: "JG", points: 22.4 },
-      { name: "Quad", position: "MID", points: 27.9 },
+      { name: "Inspired",
+        position: "JG",
+        points: 22.4,
+        recommendation: "Recomendado - boa participação em objetivos",},
+      { name: "Quad",
+        position: "MID",
+        points: 27.9,
+        recommendation: "Ótima escolha - alto abate solo e participação no dano",},
       { name: "Massu", position: "BOT", points: 13.1 },
       { name: "Busio", position: "SUP", points: 17.7 }
     ],
@@ -315,9 +343,15 @@ export const norteTeams: Team[] = [
     players: [
       { name: "Licorice", position: "TOP", points: 13.8 },
       { name: "Oddie", position: "JG", points: 18.9 },
-      { name: "Saint", position: "MID", points: 25.9 },
+      { name: "Saint",
+        position: "MID",
+        points: 25.9,
+        recommendation: "Ótima escolha - alto abate solo e participação no dano",},
       { name: "Hena", position: "BOT", points: 20.8 },
-      { name: "Lyonz", position: "SUP", points: 23.6 }
+      { name: "Lyonz",
+        position: "SUP",
+        points: 23.6,
+        recommendation: "Excelente - grande visão e assistências",}
     ]
   },
   {
@@ -330,7 +364,10 @@ export const norteTeams: Team[] = [
     players: [
       { name: "Sniper", position: "TOP", points: 10.7 },
       { name: "River", position: "JG", points: 14.1 },
-      { name: "Quid", position: "MID", points: 21.9 },
+      { name: "Quid",
+        position: "MID",
+        points: 21.9,
+        recommendation: "Recomendado - bom desempenho",},
       { name: "FBI", position: "BOT", points: 17.4 },
       { name: "Eyla", position: "SUP", points: 14.1 }
     ],
@@ -345,7 +382,10 @@ export const norteTeams: Team[] = [
     losses: 1,
     players: [
       { name: "Fudge", position: "TOP", points: 9.7 },
-      { name: "Contractz", position: "JG", points: 21.1 },
+      { name: "Contractz",
+        position: "JG",
+        points: 21.1,
+        recommendation: "Recomendado - boa participação em objetivos",},
       { name: "Palafox", position: "MID", points: 9.4 },
       { name: "Bvoy", position: "BOT", points: 17.5 },
       { name: "Ceos", position: "SUP", points: 8.3 }
