@@ -1,9 +1,17 @@
-
 // Tipos para os dados dos times e jogadores
 export interface Player {
   name: string;
   points?: number;
   position: 'TOP' | 'JG' | 'MID' | 'BOT' | 'SUP';
+  recommendation?: string;
+  stats?: {
+    kills?: number;
+    deaths?: number;
+    assists?: number;
+    cs?: number;
+    damageShare?: number;
+    killParticipation?: number;
+  };
 }
 
 export interface Team {
@@ -27,11 +35,76 @@ export const sulTeams: Team[] = [
     wins: 2,
     losses: 0,
     players: [
-      { name: "Wizer", position: "TOP", points: 32.6 },
-      { name: "CarioK", position: "JG", points: 26.9 },
-      { name: "Roamer", position: "MID", points: 18.1 },
-      { name: "Titan", position: "BOT", points: 17.9 },
-      { name: "Kuri", position: "SUP", points: 23.3 }
+      { 
+        name: "Wizer", 
+        position: "TOP", 
+        points: 32.6,
+        recommendation: "Ótima escolha - alto abate solo e participação no dano",
+        stats: {
+          kills: 5,
+          deaths: 1,
+          assists: 8,
+          cs: 215,
+          damageShare: 28,
+          killParticipation: 76
+        } 
+      },
+      { 
+        name: "CarioK", 
+        position: "JG", 
+        points: 26.9,
+        recommendation: "Recomendado - boa participação em objetivos",
+        stats: {
+          kills: 4,
+          deaths: 2,
+          assists: 12,
+          cs: 180,
+          damageShare: 15,
+          killParticipation: 87
+        }
+      },
+      { 
+        name: "Roamer", 
+        position: "MID", 
+        points: 18.1,
+        recommendation: "Ok para custo benefício - estável",
+        stats: {
+          kills: 3,
+          deaths: 2,
+          assists: 6,
+          cs: 240,
+          damageShare: 27,
+          killParticipation: 62
+        }
+      },
+      { 
+        name: "Titan", 
+        position: "BOT", 
+        points: 17.9,
+        recommendation: "Bom custo-benefício",
+        stats: {
+          kills: 4,
+          deaths: 1,
+          assists: 5,
+          cs: 260,
+          damageShare: 32,
+          killParticipation: 65
+        }
+      },
+      { 
+        name: "Kuri", 
+        position: "SUP", 
+        points: 23.3,
+        recommendation: "Excelente - grande visão e assistências",
+        stats: {
+          kills: 1,
+          deaths: 3,
+          assists: 16,
+          cs: 42,
+          damageShare: 8,
+          killParticipation: 80
+        }
+      }
     ],
     totalPoints: 23.2
   },
@@ -100,18 +173,83 @@ export const sulTeams: Team[] = [
     totalPoints: 18.1
   },
   {
-    name: "INTZ e-Sports",
+    name: "Isurus Estral",
     shortName: "IE",
     color: "bg-lta-teal text-white",
     position: 6,
     wins: 0,
     losses: 2,
     players: [
-      { name: "Burol", position: "TOP", points: 2.6 },
-      { name: "Dedoo", position: "JG", points: 2.3 },
-      { name: "Mireu", position: "MID", points: 1.9 },
-      { name: "Snaker", position: "BOT", points: 2.0 },
-      { name: "ACK", position: "SUP", points: 9.0 }
+      { 
+        name: "Burol", 
+        position: "TOP", 
+        points: 2.6,
+        recommendation: "Não recomendado - baixo desempenho",
+        stats: {
+          kills: 0,
+          deaths: 5,
+          assists: 1,
+          cs: 180,
+          damageShare: 12,
+          killParticipation: 20
+        }
+      },
+      { 
+        name: "Dedoo", 
+        position: "JG", 
+        points: 2.3,
+        recommendation: "Não recomendado - baixa participação",
+        stats: {
+          kills: 0,
+          deaths: 4,
+          assists: 2,
+          cs: 145,
+          damageShare: 10,
+          killParticipation: 33
+        }
+      },
+      { 
+        name: "Mireu", 
+        position: "MID", 
+        points: 1.9,
+        recommendation: "Não recomendado",
+        stats: {
+          kills: 1,
+          deaths: 4,
+          assists: 1,
+          cs: 190,
+          damageShare: 19,
+          killParticipation: 40
+        }
+      },
+      { 
+        name: "Snaker", 
+        position: "BOT", 
+        points: 2.0,
+        recommendation: "Não recomendado",
+        stats: {
+          kills: 1,
+          deaths: 3,
+          assists: 1,
+          cs: 210,
+          damageShare: 22,
+          killParticipation: 40
+        }
+      },
+      { 
+        name: "ACK", 
+        position: "SUP", 
+        points: 9.0,
+        recommendation: "Opção econômica - potencial",
+        stats: {
+          kills: 0,
+          deaths: 2,
+          assists: 5,
+          cs: 30,
+          damageShare: 5,
+          killParticipation: 60
+        }
+      }
     ],
     totalPoints: 3.6
   },
