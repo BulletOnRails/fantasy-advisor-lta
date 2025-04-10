@@ -20,7 +20,7 @@ const Footer = () => {
               </a>
             </Button>
             <Button variant="outline" size="sm" className="text-white border-white hover:bg-white hover:text-gray-800">
-              <a href="https://clubedojava.com.br/LTA" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+              <a href="https://clubedojava.com.br/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
                 Clube do Java <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
