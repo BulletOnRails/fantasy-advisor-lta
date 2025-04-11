@@ -7,6 +7,7 @@ export interface Match {
   teamA: string;
   teamB: string;
   region: "sul" | "norte";
+  importance?: "normal" | "high" | "critical";
 }
 
 // Dados dos próximos jogos
@@ -16,7 +17,8 @@ export const upcomingMatches: Match[] = [
     date: "12 Abr 2025 - 14:00",
     teamA: "PAIN",
     teamB: "VKS",
-    region: "sul"
+    region: "sul",
+    importance: "high"
   },
   {
     id: "sul-2",
@@ -30,7 +32,8 @@ export const upcomingMatches: Match[] = [
     date: "13 Abr 2025 - 14:00",
     teamA: "RED",
     teamB: "LLL",
-    region: "sul"
+    region: "sul",
+    importance: "critical"
   },
   {
     id: "sul-4",
@@ -51,14 +54,16 @@ export const upcomingMatches: Match[] = [
     date: "12 Abr 2025 - 18:00",
     teamA: "100T",
     teamB: "SR",
-    region: "norte"
+    region: "norte",
+    importance: "high"
   },
   {
     id: "norte-3",
     date: "13 Abr 2025 - 15:00",
     teamA: "C9",
     teamB: "TL",
-    region: "norte"
+    region: "norte",
+    importance: "critical"
   },
   {
     id: "norte-4",

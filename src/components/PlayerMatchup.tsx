@@ -2,6 +2,11 @@
 import { Player } from "@/data/teams";
 import { Badge } from "@/components/ui/badge";
 import { ArrowUpToLine, Swords, Target, Waves, ShieldAlert } from "lucide-react";
+import { 
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger 
+} from "@/components/ui/tooltip";
 
 interface PlayerMatchupProps {
   position: string;
@@ -28,39 +33,67 @@ const PlayerMatchup = ({ position, playerA, playerB }: PlayerMatchupProps) => {
     return "bg-gray-500";
   };
 
+  // Determina o texto para a dica de vantagem
+  const getAdvantageText = () => {
+    const advantage = getAdvantage();
+    if (advantage === "A") return `Vantagem para ${playerA?.name || "Time A"}`;
+    if (advantage === "B") return `Vantagem para ${playerB?.name || "Time B"}`;
+    return "Confronto equilibrado";
+  };
+
   // Retorna o ícone baseado na posição
   const getLaneIcon = () => {
     switch (position) {
-      case "TOP": return <ArrowUpToLine className="h-4 w-4" />;
-      case "JG": return <Swords className="h-4 w-4" />;
-      case "MID": return <Target className="h-4 w-4" />;
-      case "BOT": return <Waves className="h-4 w-4" />; // Fixed: Corrected from "waves" to "Waves"
-      case "SUP": return <ShieldAlert className="h-4 w-4" />;
+      case "TOP": return <ArrowUpToLine className="h-5 w-5" />;
+      case "JG": return <Swords className="h-5 w-5" />;
+      case "MID": return <Target className="h-5 w-5" />;
+      case "BOT": return <Waves className="h-5 w-5" />;
+      case "SUP": return <ShieldAlert className="h-5 w-5" />;
       default: return null;
     }
   };
 
+  // Classes para o jogador em vantagem
+  const getPlayerClassA = () => {
+    return getAdvantage() === "A" ? "font-bold text-green-600 dark:text-green-400" : "";
+  };
+
+  const getPlayerClassB = () => {
+    return getAdvantage() === "B" ? "font-bold text-green-600 dark:text-green-400" : "";
+  };
+
   return (
-    <div className="flex items-center">
+    <div className="flex items-center hover:bg-muted/30 p-2 rounded-md transition-colors">
       <div className="w-1/3 text-right">
         <div className="flex justify-end items-center gap-2">
-          <div className="text-sm font-medium">{playerA?.name || "N/A"}</div>
-          <Badge variant="outline">{playerA?.points?.toFixed(1) || "-"}</Badge>
+          <div className={`text-sm font-medium ${getPlayerClassA()}`}>{playerA?.name || "N/A"}</div>
+          <Badge variant={getAdvantage() === "A" ? "default" : "outline"}>{playerA?.points?.toFixed(1) || "-"}</Badge>
         </div>
       </div>
       
       <div className="w-1/3 flex justify-center items-center px-2">
-        {getLaneIcon()}
-        
-        {(playerA && playerB) && (
-          <div className={`w-2 h-2 rounded-full ${getAdvantageColor()} mx-1`}></div>
-        )}
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <div className="flex items-center gap-1 cursor-help">
+              <div className="bg-muted/60 p-1.5 rounded-full">
+                {getLaneIcon()}
+              </div>
+              
+              {(playerA && playerB) && (
+                <div className={`w-2.5 h-2.5 rounded-full ${getAdvantageColor()} animate-pulse mx-1`}></div>
+              )}
+            </div>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>{getAdvantageText()}</p>
+          </TooltipContent>
+        </Tooltip>
       </div>
       
       <div className="w-1/3">
         <div className="flex items-center gap-2">
-          <Badge variant="outline">{playerB?.points?.toFixed(1) || "-"}</Badge>
-          <div className="text-sm font-medium">{playerB?.name || "N/A"}</div>
+          <Badge variant={getAdvantage() === "B" ? "default" : "outline"}>{playerB?.points?.toFixed(1) || "-"}</Badge>
+          <div className={`text-sm font-medium ${getPlayerClassB()}`}>{playerB?.name || "N/A"}</div>
         </div>
       </div>
     </div>
