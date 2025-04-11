@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Trophy, Calendar } from "lucide-react";
+import { Trophy, Calendar, Users } from "lucide-react";
 
 const Header = () => {
   return (
@@ -15,10 +15,15 @@ const Header = () => {
           <nav>
             <ul className="flex space-x-6">
               <li>
-                <Link to="/" className="flex items-center gap-1 hover:text-primary-foreground/80 transition-colors">
-                  <Trophy className="h-5 w-5" />
-                  <span>Rankings</span>
-                </Link>
+                <a 
+                  href="https://ltafantasy.com/leagues/liga-advisor-p75950celb?sid=8wSxLc" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 hover:text-primary-foreground/80 transition-colors"
+                >
+                  <Users className="h-5 w-5" />
+                  <span>Entre na Minha Liga</span>
+                </a>
               </li>
               <li>
                 <Link to="/partidas" className="flex items-center gap-1 hover:text-primary-foreground/80 transition-colors">

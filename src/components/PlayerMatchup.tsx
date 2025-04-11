@@ -1,6 +1,7 @@
 
 import { Player } from "@/data/teams";
 import { Badge } from "@/components/ui/badge";
+import { ArrowUpToLine, Swords, Waves, Target, ShieldAlert } from "lucide-react";
 
 interface PlayerMatchupProps {
   position: string;
@@ -27,7 +28,19 @@ const PlayerMatchup = ({ position, playerA, playerB }: PlayerMatchupProps) => {
     return "bg-gray-500";
   };
 
-  // Determina o ícone baseado na diferença de pontuação
+  // Retorna o ícone baseado na posição
+  const getLaneIcon = () => {
+    switch (position) {
+      case "TOP": return <ArrowUpToLine className="h-4 w-4" />;
+      case "JG": return <Swords className="h-4 w-4" />;
+      case "MID": return <Target className="h-4 w-4" />;
+      case "BOT": return <Waves className="h-4 w-4" />;
+      case "SUP": return <ShieldAlert className="h-4 w-4" />;
+      default: return null;
+    }
+  };
+
+  // Determina a cor de fundo baseado na posição
   const getPositionBgColor = () => {
     switch (position) {
       case "TOP": return "bg-lta-blue";
@@ -50,7 +63,7 @@ const PlayerMatchup = ({ position, playerA, playerB }: PlayerMatchupProps) => {
       
       <div className="w-1/3 flex justify-center items-center px-2">
         <div className={`w-8 h-8 rounded-full ${getPositionBgColor()} text-white flex items-center justify-center`}>
-          <span className="text-xs font-bold">{position}</span>
+          {getLaneIcon()}
         </div>
         
         {(playerA && playerB) && (

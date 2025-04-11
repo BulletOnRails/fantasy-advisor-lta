@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { CalendarClock } from "lucide-react";
 import PlayerMatchup from "./PlayerMatchup";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 interface MatchCardProps {
   match: Match;
@@ -42,9 +43,12 @@ const MatchCard = ({ match, teamA, teamB }: MatchCardProps) => {
         
         <div className="flex justify-between items-center">
           <div className="flex flex-col items-center w-2/5">
-            <div className={`w-10 h-10 rounded-full ${teamA.color} flex items-center justify-center text-lg font-bold mb-1`}>
-              {teamA.shortName.charAt(0)}
-            </div>
+            <Avatar className="w-12 h-12 mb-2">
+              <AvatarImage src={`/placeholder-${teamA.shortName}.png`} alt={teamA.name} />
+              <AvatarFallback className={`${teamA.color} text-lg font-bold`}>
+                {teamA.shortName.charAt(0)}
+              </AvatarFallback>
+            </Avatar>
             <h3 className="font-bold text-sm">{teamA.name}</h3>
             <span className="text-xs text-muted-foreground">{teamA.wins}W - {teamA.losses}L</span>
           </div>
@@ -52,9 +56,12 @@ const MatchCard = ({ match, teamA, teamB }: MatchCardProps) => {
           <div className="text-xl font-bold">VS</div>
           
           <div className="flex flex-col items-center w-2/5">
-            <div className={`w-10 h-10 rounded-full ${teamB.color} flex items-center justify-center text-lg font-bold mb-1`}>
-              {teamB.shortName.charAt(0)}
-            </div>
+            <Avatar className="w-12 h-12 mb-2">
+              <AvatarImage src={`/placeholder-${teamB.shortName}.png`} alt={teamB.name} />
+              <AvatarFallback className={`${teamB.color} text-lg font-bold`}>
+                {teamB.shortName.charAt(0)}
+              </AvatarFallback>
+            </Avatar>
             <h3 className="font-bold text-sm">{teamB.name}</h3>
             <span className="text-xs text-muted-foreground">{teamB.wins}W - {teamB.losses}L</span>
           </div>
