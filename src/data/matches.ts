@@ -50,7 +50,7 @@ export const upcomingMatches: Match[] = [
     id: "norte-2",
     date: "12 Abr 2025 - 18:00",
     teamA: "100T",
-    teamB: "S.R",
+    teamB: "SR",
     region: "norte"
   },
   {

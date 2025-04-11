@@ -384,7 +384,7 @@ export const norteTeams: Team[] = [
   },
   {
     name: "Shopify Rebellion",
-    shortName: "S.R",
+    shortName: "SR",
     color: "bg-lta-blue text-white",
     position: 4,
     wins: 1,
