@@ -43,7 +43,7 @@ const TeamRanking = ({ teams, title }: TeamRankingProps) => {
               <TableCell className="font-medium">{team.position}</TableCell>
               <TableCell>
                 <div className="flex items-center gap-2">
-                  <div className={`w-3 h-3 rounded-full ${team.color}`}></div>
+                  <div className={`w-3 h-3 rounded-full ${team.logo}`}></div>
                   <span>{team.name}</span>
                 </div>
               </TableCell>

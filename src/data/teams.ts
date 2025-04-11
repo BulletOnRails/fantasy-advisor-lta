@@ -108,7 +108,7 @@ export const sulTeams: Team[] = [
       }
     ],
     totalPoints: 23.2,
-    logo: "public/placeholder-PAIN.png"
+    logo: "/placeholder-PAIN.png"
   },
   {
     name: "VKS",
@@ -152,7 +152,7 @@ export const sulTeams: Team[] = [
       {name: "Trymbi", position: "SUP", points: 21.7}
     ],
     totalPoints: 25.7,
-    logo: "public/placeholder-VKS.png"
+    logo: "/placeholder-VKS.png"
   },
   {
     name: "Leviatan",
@@ -169,7 +169,7 @@ export const sulTeams: Team[] = [
       {name: "Prodelta", position: "SUP", points: 14.0}
     ],
     totalPoints: 16.9,
-    logo: "public/placeholder-LEV.png"
+    logo: "/placeholder-LEV.png"
   },
   {
     name: "Furia",
@@ -196,7 +196,7 @@ export const sulTeams: Team[] = [
       {name: "Jojo", position: "SUP", points: 21.9}
     ],
     totalPoints: 20.7,
-    logo: "public/placeholder-FUR.png"
+    logo: "/placeholder-FUR.png"
   },
   {
     name: "Red Canids",
@@ -213,7 +213,7 @@ export const sulTeams: Team[] = [
       {name: "Frosty", position: "SUP", points: 21.1}
     ],
     totalPoints: 18.1,
-    logo: "public/placeholder-RED.png"
+    logo: "/placeholder-RED.png"
   },
   {
     name: "Isurus Estral",
@@ -295,7 +295,7 @@ export const sulTeams: Team[] = [
       }
     ],
     totalPoints: 3.6,
-    logo: "public/placeholder-IE.png"
+    logo: "/placeholder-IE.png"
   },
   {
     name: "LOUD",
@@ -312,7 +312,7 @@ export const sulTeams: Team[] = [
       {name: "Redbert", position: "SUP", points: 6.3}
     ],
     totalPoints: 8.5,
-    logo: "public/placeholder-LLL.png"
+    logo: "/placeholder-LLL.png"
   },
   {
     name: "FUXVM",
@@ -334,7 +334,7 @@ export const sulTeams: Team[] = [
       {name: "Guigs", position: "SUP", points: 10.7}
     ],
     totalPoints: 13.7,
-    logo: "public/placeholder-FXVM.png"
+    logo: "/placeholder-FXVM.png"
   }
 ];
 
@@ -343,7 +343,7 @@ export const norteTeams: Team[] = [
   {
     name: "FLY",
     shortName: "FLY",
-    color: "bg-lta-green text-white",
+    color: "bg-lta-greendarker text-black",
     position: 1,
     wins: 2,
     losses: 0,
@@ -365,7 +365,7 @@ export const norteTeams: Team[] = [
       {name: "Busio", position: "SUP", points: 17.7}
     ],
     totalPoints: 20.5,
-    logo: ""
+    logo: "/placeholder-FLY.png"
   },
   {
     name: "LYON",
@@ -391,12 +391,12 @@ export const norteTeams: Team[] = [
         recommendation: "Excelente - grande visão e assistências",
       }
     ],
-    logo: ""
+    logo: "/placeholder-LYON.png"
   },
   {
     name: "100 Thieves",
     shortName: "100T",
-    color: "bg-lta-orange text-white",
+    color: "bg-lta-orange text-black",
     position: 3,
     wins: 1,
     losses: 1,
@@ -413,12 +413,12 @@ export const norteTeams: Team[] = [
       {name: "Eyla", position: "SUP", points: 14.1}
     ],
     totalPoints: 15.6,
-    logo: ""
+    logo: "/placeholder-100T.png"
   },
   {
     name: "Shopify Rebellion",
     shortName: "SR",
-    color: "bg-lta-blue text-white",
+    color: "bg-lta-white text-black",
     position: 4,
     wins: 1,
     losses: 1,
@@ -434,12 +434,12 @@ export const norteTeams: Team[] = [
       {name: "Bvoy", position: "BOT", points: 17.5},
       {name: "Ceos", position: "SUP", points: 8.3}
     ],
-    logo: ""
+    logo: "/placeholder-SR.png"
   },
   {
     name: "Cloud 9",
     shortName: "C9",
-    color: "bg-lta-blue text-white",
+    color: "bg-lta-blue-dark text-white",
     position: 5,
     wins: 1,
     losses: 1,
@@ -451,12 +451,12 @@ export const norteTeams: Team[] = [
       {name: "Vulcan", position: "SUP", points: 15.8}
     ],
     totalPoints: 13.8,
-    logo: ""
+    logo: "/placeholder-C9.png"
   },
   {
     name: "Team Liquid",
     shortName: "TL",
-    color: "bg-lta-blue text-white",
+    color: "bg-lta-blue-dark text-white",
     position: 6,
     wins: 1,
     losses: 1,
@@ -468,12 +468,12 @@ export const norteTeams: Team[] = [
       {name: "CoreJJ", position: "SUP", points: 16.9}
     ],
     totalPoints: 13.2,
-    logo: ""
+    logo: "/placeholder-TL.png"
   },
   {
     name: "DSG",
     shortName: "DSG",
-    color: "bg-lta-yellow text-white",
+    color: "bg-lta-pinkdark text-white",
     position: 7,
     wins: 0,
     losses: 2,
@@ -485,12 +485,12 @@ export const norteTeams: Team[] = [
       {name: "Huhi", position: "SUP", points: 5.2}
     ],
     totalPoints: 8.1,
-    logo: ""
+    logo: "/placeholder-DSG.png"
   },
   {
     name: "Dignitas",
     shortName: "DIG",
-    color: "bg-lta-yellow text-white",
+    color: "bg-lta-yellowl lighter text-black",
     position: 8,
     wins: 0,
     losses: 2,
@@ -502,6 +502,6 @@ export const norteTeams: Team[] = [
       {name: "Isles", position: "SUP", points: 12.2}
     ],
     totalPoints: 10.5,
-    logo: "public/placeholder-DIG.png"
+    logo: "/placeholder-DIG.png"
   }
 ];
