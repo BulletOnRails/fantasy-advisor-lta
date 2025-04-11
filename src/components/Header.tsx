@@ -1,18 +1,34 @@
 
-import { Trophy } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Trophy, Calendar } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="bg-gradient-to-r from-lta-blue to-lta-purple py-8 px-4 text-white">
-      <div className="container mx-auto flex flex-col items-center">
-        <div className="flex items-center gap-3 mb-4">
-          <Trophy size={40} />
-          <h1 className="text-4xl font-bold">Fantasy LTA Advisor</h1>
+    <header className="bg-primary text-primary-foreground shadow-md">
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <Link to="/" className="flex items-center gap-2 mb-4 md:mb-0">
+            <Trophy className="h-8 w-8" />
+            <div className="text-2xl font-bold">Fantasy LTA Advisor</div>
+          </Link>
+          
+          <nav>
+            <ul className="flex space-x-6">
+              <li>
+                <Link to="/" className="flex items-center gap-1 hover:text-primary-foreground/80 transition-colors">
+                  <Trophy className="h-5 w-5" />
+                  <span>Rankings</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/partidas" className="flex items-center gap-1 hover:text-primary-foreground/80 transition-colors">
+                  <Calendar className="h-5 w-5" />
+                  <span>Próximos Jogos</span>
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <p className="text-xl max-w-2xl text-center">
-          Recomendações de escalações para o LTA Fantasy. Escolha os melhores
-          jogadores para sua equipe e domine a liga!
-        </p>
       </div>
     </header>
   );
