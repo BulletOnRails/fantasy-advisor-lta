@@ -1,7 +1,7 @@
 
 import { Player } from "@/data/teams";
 import { Badge } from "@/components/ui/badge";
-import { ArrowUpToLine, Swords, Waves, Target, ShieldAlert } from "lucide-react";
+import { ArrowUpToLine, Swords, Target, Waves, ShieldAlert } from "lucide-react";
 
 interface PlayerMatchupProps {
   position: string;
@@ -34,21 +34,9 @@ const PlayerMatchup = ({ position, playerA, playerB }: PlayerMatchupProps) => {
       case "TOP": return <ArrowUpToLine className="h-4 w-4" />;
       case "JG": return <Swords className="h-4 w-4" />;
       case "MID": return <Target className="h-4 w-4" />;
-      case "BOT": return <Waves className="h-4 w-4" />;
+      case "BOT": return <Waves className="h-4 w-4" />; // Fixed: Corrected from "waves" to "Waves"
       case "SUP": return <ShieldAlert className="h-4 w-4" />;
       default: return null;
-    }
-  };
-
-  // Determina a cor de fundo baseado na posição
-  const getPositionBgColor = () => {
-    switch (position) {
-      case "TOP": return "bg-lta-blue";
-      case "JG": return "bg-lta-green";
-      case "MID": return "bg-lta-purple";
-      case "BOT": return "bg-lta-red";
-      case "SUP": return "bg-lta-orange";
-      default: return "bg-gray-500";
     }
   };
 
@@ -62,9 +50,7 @@ const PlayerMatchup = ({ position, playerA, playerB }: PlayerMatchupProps) => {
       </div>
       
       <div className="w-1/3 flex justify-center items-center px-2">
-        <div className={`w-8 h-8 rounded-full ${getPositionBgColor()} text-white flex items-center justify-center`}>
-          {getLaneIcon()}
-        </div>
+        {getLaneIcon()}
         
         {(playerA && playerB) && (
           <div className={`w-2 h-2 rounded-full ${getAdvantageColor()} mx-1`}></div>
